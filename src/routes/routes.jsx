@@ -1,6 +1,7 @@
 import {Routes ,Route} from 'react-router-dom';
 
 import Main from '../components/main/main';
+import SearchResults from '../components/search-results/search-results';
 
 function Switch() {
   return (
@@ -8,6 +9,8 @@ function Switch() {
   <Routes>
 
    <Route path="/" element={<Main/>}/>
+    <Route path="/search/:id" element={<SearchResults/>}/>
+
 
 
   </Routes>

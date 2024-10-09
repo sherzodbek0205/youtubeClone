@@ -7,9 +7,10 @@ export default function App() {
   return (
     <>
 
-     <Navbar/>
+
 
      <BrowserRouter>
+     <Navbar/>
       <Switch />
     </BrowserRouter>
     </>
