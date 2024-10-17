@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ApiService } from '../../service/api.service';
 import Category from '../category/category';
+import {category} from '../category/const'
 
 
-
-function SearchResults({selectedCategoryHandler}) {
+function SearchResults({selectedCategoryHandler,selectedCategory}) {
  const [videos, setVideos] = useState([])
 	const { id } = useParams()
 
@@ -25,7 +25,6 @@ function SearchResults({selectedCategoryHandler}) {
 
   return (
     <>
- <Category selectedCategoryHandler={selectedCategoryHandler}/>
       <div className='grid p-2 grid-cols-1 gap-4 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4'>
       {videos.map((video) => (
 
