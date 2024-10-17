@@ -25,6 +25,10 @@ function SearchResults({selectedCategoryHandler,selectedCategory}) {
 
   return (
     <>
+				<div className="text-[35px] flex gap-2 font-bold ">
+					<h1  className="text-white">Search results by </h1>
+					<h1 className="text-red-600 capitalize ">{id}</h1>
+				</div>
       <div className='grid p-2 grid-cols-1 gap-4 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4'>
       {videos.map((video) => (
 
