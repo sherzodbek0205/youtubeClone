@@ -1,13 +1,13 @@
-import React from 'react';
-
+import {Link , useParams} from 'react-router-dom';
 
 function Videos({ videos }) {
- console.log(videos);
+
   return (
     <>
+
      <div className='grid p-2 grid-cols-1 gap-4 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 '>
       {videos.map((video) => (
-
+        <Link to={`/video/${video.id.videoId}`} >
  <div key={video.id.videoId} className=' flex flex-col gap-1  '>
 <img className=" rounded-xl" src={video.snippet.thumbnails?.medium?.url || video.snippet.thumbnails?.default?.url} alt="" />
 <div className='flex justify-start gap-2 p-2'>
@@ -19,13 +19,13 @@ function Videos({ videos }) {
 </div>
  </div>
 
-
+ </Link>
 
       ))}
       </div>
+
     </>
   );
 }
 
 export default Videos;
-  

@@ -1,13 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';  // useNavigate-ni import qilamiz
+import { useNavigate } from 'react-router-dom';  
 import { category } from './const';
 
 function Category({ selectedCategoryHandler }) {
-  const navigate = useNavigate();  // useNavigate hook-ni chaqiramiz
+  const navigate = useNavigate();
 
   const handleCategoryClick = (categoryName) => {
-    selectedCategoryHandler(categoryName);  // Kategoriya tanlanganda qiymatni uzatamiz
-    navigate('/');  // Asosiy sahifaga marshrutlash
+    selectedCategoryHandler(categoryName);
+    navigate('/');
   };
 
   return (
