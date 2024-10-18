@@ -28,11 +28,4 @@ function Videos({ videos }) {
 }
 
 export default Videos;
-  {/* <Card
-          key={video.id.videoId}
-          hoverable
-          style={{ width: 240, margin: '10px' }}
-          cover={<img alt={video.snippet.title} src={video.snippet.thumbnails?.medium?.url || video.snippet.thumbnails?.default?.url} />}
-        >
-          <Meta title={video.snippet.title} description={video.snippet.description} />
-        </Card> */}
+  

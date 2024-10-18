@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { ApiService } from '../../service/api.service';
 import Category from '../category/category';
 import {category} from '../category/const'
+import Videos from '../videos/videos';
 
 
 function SearchResults({selectedCategoryHandler,selectedCategory}) {
@@ -29,24 +30,7 @@ function SearchResults({selectedCategoryHandler,selectedCategory}) {
 					<h1  className="text-white">Search results by </h1>
 					<h1 className="text-red-600 capitalize ">{id}</h1>
 				</div>
-      <div className='grid p-2 grid-cols-1 gap-4 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4'>
-      {videos.map((video) => (
-
- <div key={video.id.videoId} className=' flex flex-col gap-1 '>
-<img src={video.snippet.thumbnails?.medium?.url || video.snippet.thumbnails?.default?.url} alt="" />
-<div className='flex justify-start gap-2 p-2'>
-<img className='w-[30px] h-[30px] rounded-full' src={video.snippet.thumbnails?.medium?.url} alt="" />
-<div className='flex flex-col gap-2'>
- <p>{video?.snippet?.title.slice(0,50)}</p>
- <p>{video?.snippet?.channelTitle}</p>
-</div>
-</div>
- </div>
-
-
-
-      ))}
-      </div>
+     <Videos videos={videos}/>
     </>
   );
 }
